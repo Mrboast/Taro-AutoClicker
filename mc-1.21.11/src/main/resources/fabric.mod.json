@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "airclicker",
   "version": "${version}",
-  "name": "Air AutoClicker",
+  "name": "Taro AutoClicker Oficial",
   "description": "Autoclick simple (clic al aire) con intervalo configurable de 0.8 s a 3 min.",
   "authors": ["Tú"],
   "license": "MIT",
