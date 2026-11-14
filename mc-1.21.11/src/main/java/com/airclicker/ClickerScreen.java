@@ -21,7 +21,7 @@ public class ClickerScreen extends Screen {
     private ButtonWidget stopBtn;
 
     public ClickerScreen() {
-        super(Text.literal("Air AutoClicker"));
+        super(Text.literal("Taro Autoclicker Oficial"));
     }
 
     private int px() { return (width - W) / 2; }
@@ -64,7 +64,7 @@ public class ClickerScreen extends Screen {
         int left = x + 16, right = x + W - 16;
 
         // Encabezado
-        ctx.drawText(textRenderer, "Air AutoClicker", left, y + 14, WHITE, true);
+        ctx.drawText(textRenderer, "Taro Autoclicker Oficial", left, y + 14, WHITE, true);
         badge(ctx, "Clic al aire", right, y + 12, GREEN, GREEN_BG);
 
         // Estado
@@ -83,8 +83,8 @@ public class ClickerScreen extends Screen {
 
         // Separador y datos
         ctx.fill(left, y + 120, right, y + 121, 0xFF1F1F1F);
-        row(ctx, "Tiempo mínimo", "0.8 segundos", y + 130, left, right);
-        row(ctx, "Tiempo máximo", "180 segundos (3 min)", y + 146, left, right);
+        row(ctx, "Tiempo mínimo", "0.5 segundos", y + 130, left, right);
+        row(ctx, "Tiempo máximo", "15 segundos", y + 146, left, right);
         row(ctx, "Tecla de activación",
                 AirClickerMod.toggleKey.getBoundKeyLocalizedText().getString(), y + 162, left, right);
     }
@@ -99,7 +99,7 @@ public class ClickerScreen extends Screen {
         ClickerConfig.save();
     }
 
-    /** Slider logarítmico: más precisión en tiempos cortos, llega hasta 3 minutos. */
+    /** Slider logarítmico: más precisión en tiempos cortos. */
     private static class IntervalSlider extends SliderWidget {
         IntervalSlider(int x, int y, int w, int h) {
             super(x, y, w, h, Text.empty(), toSlider(ClickerConfig.intervalSeconds));
