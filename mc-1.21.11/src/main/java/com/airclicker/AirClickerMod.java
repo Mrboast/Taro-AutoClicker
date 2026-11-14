@@ -40,7 +40,7 @@ public class AirClickerMod implements ClientModInitializer {
                     MinecraftClient mc = MinecraftClient.getInstance();
                     if (mc.options.hudHidden) return;
                     long left = Math.max(0, nextClick - System.currentTimeMillis());
-                    String txt = "AutoClick ● " + ClickerConfig.format(ClickerConfig.intervalSeconds)
+                    String txt = "Taro Autoclicker Oficial 1.21.11 ● " + ClickerConfig.format(ClickerConfig.intervalSeconds)
                             + "  (próximo en " + String.format(java.util.Locale.ROOT, "%.1f", left / 1000.0) + " s)";
                     ctx.drawTextWithShadow(mc.textRenderer, txt, 6, 6, 0xFF22C55E);
                 });
