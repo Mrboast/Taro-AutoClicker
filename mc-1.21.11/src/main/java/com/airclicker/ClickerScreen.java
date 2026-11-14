@@ -7,7 +7,9 @@ import net.minecraft.client.gui.widget.SliderWidget;
 import net.minecraft.text.Text;
 
 public class ClickerScreen extends Screen {
-    private static final int W = 300;
+    private static final String NAME = "Taro Autoclicker Oficial 1.21.11";
+
+    private static final int W = 340;
     private static final int H = 222;
 
     private static final int GREEN = 0xFF22C55E;
@@ -21,7 +23,7 @@ public class ClickerScreen extends Screen {
     private ButtonWidget stopBtn;
 
     public ClickerScreen() {
-        super(Text.literal("Taro Autoclicker Oficial"));
+        super(Text.literal(NAME));
     }
 
     private int px() { return (width - W) / 2; }
@@ -64,7 +66,7 @@ public class ClickerScreen extends Screen {
         int left = x + 16, right = x + W - 16;
 
         // Encabezado
-        ctx.drawText(textRenderer, "Taro Autoclicker Oficial", left, y + 14, WHITE, true);
+        ctx.drawText(textRenderer, NAME, left, y + 14, WHITE, true);
         badge(ctx, "Clic al aire", right, y + 12, GREEN, GREEN_BG);
 
         // Estado
