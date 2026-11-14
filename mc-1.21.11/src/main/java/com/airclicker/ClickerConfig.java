@@ -11,8 +11,8 @@ import java.nio.file.Path;
 import java.util.Locale;
 
 public class ClickerConfig {
-    public static final double MIN = 0.8;    // segundos
-    public static final double MAX = 180.0;  // 3 minutos
+    public static final double MIN = 0.5;    // segundos
+    public static final double MAX = 15.0;   // segundos
 
     private static final Path FILE = FabricLoader.getInstance().getConfigDir().resolve("airclicker.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
